@@ -14,12 +14,19 @@
     <div class="container mb-5">
         <div th:if="${message != null}" class="alert alert-success alert-dismissible fade show text-center message">
             [[${message}]]
-            <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Cerrar">x</button>
-            <span aria-hidden="true"></span>
+            <button type="button" class="close btn-sm" data-dismiss="alert" aria-label="Cerrar"></button>
+            <span aria-hidden="true">x</span>
         </div>
     </div>
 </div>
 <div class="container">
+    <div class="row mb-3">
+        <div class="col-md-12 d-flex justify-content-start">
+            <a th:href="@{/export/pdf}" class="btn btn-danger">Generar PDF</a>
+            &nbsp;&nbsp;
+            <a th:href="@{/export/excel}" class="btn btn-success">Generar excel</a>
+        </div>
+    </div>
     <h1 class="text-center">Gestión de Cursos</h1>
     <table class="table table-hover table-responsive-xl">
         <thead class="thead-light">
